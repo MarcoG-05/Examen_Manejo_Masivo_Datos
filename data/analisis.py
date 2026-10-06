@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import matplotlib.pyplot as plt
 
 def analizar_datos():
     # Cargar el dataset (Asegúrate de que la carpeta y el archivo se llamen así)
@@ -51,6 +52,25 @@ def analizar_datos():
     
     df_alertas.to_csv(ruta_salida, index=False)
     print(f"Archivo exportado a: {ruta_salida}")
+
+    print("7. Generar Gráfica")
+    # Configurar el tamaño y estilo de la gráfica
+    plt.figure(figsize=(10, 6))
+    
+    # Crear gráfica de barras 
+    promedio_temp.plot(kind='bar', color='skyblue', edgecolor='black')
+    
+    # Agregar títulos y etiquetas
+    plt.title('Temperatura Promedio por Planta', fontsize=14)
+    plt.xlabel('Planta', fontsize=12)
+    plt.ylabel('Temperatura Promedio (°C)', fontsize=12)
+    plt.xticks(rotation=45) 
+    plt.tight_layout() # Ajustar márgenes
+    
+    # Guardar como imagen en la carpeta de resultados
+    ruta_grafica = 'resultados/temp_promedio.png'
+    plt.savefig(ruta_grafica)
+    print(f"Gráfica guardada exitosamente en: {ruta_grafica}")
 
 if __name__ == "__main__":
     analizar_datos()
