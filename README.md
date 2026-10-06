@@ -22,17 +22,29 @@ Visualización: Genera una gráfica de barras (temp_promedio.png) con el promedi
 
 Estructura del Repositorio
 
-Examen_Manejo_Masivo_Datos/
-├── data/                            # Dataset original (requerido)
-│   └── sensores_industriales.csv    
-├── resultados/                      # Carpeta generada automáticamente
-│   ├── alertas.csv                  # Dataset filtrado con alertas (> 85°C)
-│   └── temp_promedio.png            # Gráfica de barras exportada
-│                   
-├── .gitignore                       # Archivos ignorados por Git
-├── analisis.py                      # Script principal de ejecución
-├── informe.md                       # Parte II
-└── requirements.txt                 # Lista de dependencias del proyecto
+ Estructura del Repositorio
+
+A continuación se detalla la organización de los archivos en el proyecto:
+
+📁 data/
+
+---📄 sensores_industriales.csv (Dataset original requerido)
+
+📁 resultados/
+
+---📄 alertas.csv (Dataset filtrado generado automáticamente)
+
+---📄 temp_promedio.png (Gráfica de barras exportada)
+
+📄 .gitignore (Archivos y carpetas ignoradas por Git, como el entorno virtual)
+
+📄 analisis.py (Script principal de ejecución)
+
+📄 informe.md (Documento con las respuestas de la Parte II del examen)
+
+📄 requirements.txt (Lista de dependencias de Python)
+
+
 
 Requisitos Previos
 
