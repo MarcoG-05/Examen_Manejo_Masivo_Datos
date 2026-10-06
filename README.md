@@ -23,15 +23,16 @@ Visualización: Genera una gráfica de barras (temp_promedio.png) con el promedi
 Estructura del Repositorio
 
 Examen_Manejo_Masivo_Datos/
-├── datos/
-│   └── sensores_industriales.csv  # Dataset original (requerido)
-├── resultados/                    # Carpeta generada automáticamente
-│   ├── alertas.csv                # Dataset filtrado con alertas (> 85°C)
-│   └── temp_promedio.png          # Gráfica de barras exportada
-├── .gitignore                     # Archivos ignorados por Git 
-├── analisis.py                    # Script principal de ejecución
-└── requirements.txt               # Lista de dependencias del proyecto
-
+├── data/                            # Dataset original (requerido)
+│   └── sensores_industriales.csv    
+├── resultados/                      # Carpeta generada automáticamente
+│   ├── alertas.csv                  # Dataset filtrado con alertas (> 85°C)
+│   └── temp_promedio.png            # Gráfica de barras exportada
+│                   
+├── .gitignore                       # Archivos ignorados por Git
+├── analisis.py                      # Script principal de ejecución
+├── informe.md                       # Parte II
+└── requirements.txt                 # Lista de dependencias del proyecto
 
 Requisitos Previos
 
