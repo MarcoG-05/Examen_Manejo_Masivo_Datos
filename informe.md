@@ -34,12 +34,12 @@ el volumen solo es una parte de el Big Data. si solo tienes una de las 5 v no es
 - Memoria y almacenamiento: cargar todo el archivo en una sola máquina deja de ser viable, matas a un solo dispositivo :c.
 - Tiempo de procesamiento: un script secuencial tardaría demasiado y el resultado llegaría tarde.
 - Un solo punto de falla: si la máquina se cae, se pierde todo.
-- Variedad: un CSV y `pandas` no sirven para fotos ni texto libre, hacen falta otras herramientas.
+- Variedad: un CSV y pandas no sirven para fotos ni texto libre, hacen falta otras herramientas.
 - Escalabilidad: harían falta almacenamiento y cómputo distribuidos.
 
 ---
 
-## 7. Batch y Streaming
+## Batch y Streaming
 
 ### Tipo de procesamiento que realizamos
 
@@ -62,7 +62,7 @@ Usaría batch. Se necesitan promedios, máximos y conteos del día completo, y e
 
 ---
 
-## 8. Lambda y Kappa
+## Lambda y Kappa
 
 ### Escenario A: Arquitectura Lambda
 
@@ -98,16 +98,16 @@ una sola ruta de código en streaming y un registro de eventos inmutable donde s
 
 ---
 
-## 9. Analítica descriptiva, predictiva y prescriptiva
+## Analítica descriptiva, predictiva y prescriptiva
 
-### Descriptiva (qué pasó): dos hallazgos reales
+### Descriptiva:
 
 1. Hubo 6,954 lecturas con temperatura mayor que 85 °C. Planta_3 tuvo más alertas (unas 1,777), seguida de Planta_1 (1,737), Planta_4 (1,732) y Planta_2 (1,708). La diferencia entre la primera y la última es de 69 alertas. Los promedios de temperatura por planta son casi iguales ( ntre 66.53 y 66.77 °C)
 2. La temperatura máxima fue 104.99 °C y se repitió en 4 lecturas de 4 sensores distintos, el S023 y S030 (Planta_3) y S019 y S014 (Planta_2). esta analitica nos sirve como historial y es indispensable para comprender la situación que se analiza y los posibles futuros
 
-### Predictiva (qué podría pasar)
+### Predictiva:
 
- ¿qué sensores o máquinas tienen más probabilidad de mantener temperaturas > 85 °C durante varias lecturas seguidas en las próximas horas, y cuáles podrían presentar una falla en los próximos días?
+ ¿qué sensores o máquinas tienen más probabilidad de mantener temperaturas > 85 °C durante varias lecturas seguidas en las próximas horas, y cuáles podrían fallar en los próximos días?
 
 Datos adicionales necesarios:
 - Historial de fallas y paros de cada máquina (la variable que se quiere predecir; el CSV no la tiene).
@@ -115,7 +115,7 @@ Datos adicionales necesarios:
 - Historial más largo (el CSV cubre unas 41 horas) para ver patrones por hora, día o temporada, entre mayor sea el historial se tiene mas materia prima para trabajar, de ahí surge la importancia de la analitica descriptiva
 - Condiciones de operación: carga de trabajo, temperatura del ambiente, horas de uso y fecha del último mantenimiento.
 
-### Prescriptiva (qué hacer)
+### Prescriptiva:
 
 Riesgo previsto: un modelo predictivo señala que una máquina de Planta_3 tiene gran probabilidad de sobrecalentarse en las próximas horas. 
 
